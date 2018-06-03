@@ -26,7 +26,9 @@ Resources:
       Runtime: python3.6
       MemorySize: 128
       Timeout: 10
-      Role: 'arn:aws:iam::921003448605:role/lambda_basic_execution'
+      Role: 
+        Fn::ImportValue:
+          !Join ['-', [!Ref 'ProjectId', !Ref 'AWS::Region', 'LambdaTrustRole']]
       Environment:
         Variables:
           token: 9zHtf5bVu3mjF9Kg1tvlNcL1yJwF8cCQqc6MH4MHK/q5KU/zuaO8s88k3vdBzbrVWCExxL7z3dcwiOhU4r83jNyOuXFT0NuxI+iNB3eyZieNzIPxnRXBuM6eRfpIn55d1J2BxYfa2BJFNX2J2ILdxQdB04t89/1O/w1cDnyilFU=

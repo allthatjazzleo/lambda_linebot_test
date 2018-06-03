@@ -22,7 +22,7 @@ Resources:
   HelloWorld:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: index.handler
+      Handler: lambda_function.handler
       Runtime: python3.6
       Role:
         Fn::ImportValue:

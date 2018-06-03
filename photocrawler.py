@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
 import random
-import lxml
 import urllib.request
 
 def return_url():

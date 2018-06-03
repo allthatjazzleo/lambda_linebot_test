@@ -19,7 +19,7 @@ Parameters:
 #       Type: Canary10Percent5Minutes
 
 Resources:
-  Lambda_LineBot:
+  LambdaLineBot:
     Type: AWS::Serverless::Function
     Properties:
       Handler: lambda_function.handler

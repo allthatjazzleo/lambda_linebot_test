@@ -19,7 +19,7 @@ Parameters:
 #       Type: Canary10Percent5Minutes
 
 Resources:
-  HelloWorld:
+  Lambda_LineBot:
     Type: AWS::Serverless::Function
     Properties:
       Handler: lambda_function.handler
@@ -27,6 +27,9 @@ Resources:
       Role:
         Fn::ImportValue:
           !Join ['-', [!Ref 'ProjectId', !Ref 'AWS::Region', 'LambdaTrustRole']]
+      Environment:
+        Variables:
+          token: 9zHtf5bVu3mjF9Kg1tvlNcL1yJwF8cCQqc6MH4MHK/q5KU/zuaO8s88k3vdBzbrVWCExxL7z3dcwiOhU4r83jNyOuXFT0NuxI+iNB3eyZieNzIPxnRXBuM6eRfpIn55d1J2BxYfa2BJFNX2J2ILdxQdB04t89/1O/w1cDnyilFU=
       Events:
         GetEvent:
           Type: Api
